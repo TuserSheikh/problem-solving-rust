@@ -1,3 +1,6 @@
+mod string;
+
 fn main() {
-    println!("Hello, world!");
+    let reverse_string = string::reverse("abc");
+    println!("{:?}", reverse_string);
 }
