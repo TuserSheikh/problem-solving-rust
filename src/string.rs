@@ -1,8 +1,12 @@
+pub mod validate;
+
+#[allow(dead_code)]
 pub fn reverse_word(string: &str) -> String {
 	string.chars().rev().collect()
 }
 
-pub fn panagram_check(string: &str) -> bool {
+#[allow(dead_code)]
+pub fn is_panagram(string: &str) -> bool {
 	let mut letters: [bool; 26] = [false; 26];
 
 	for c in string.to_lowercase().chars() {
@@ -21,6 +25,7 @@ pub fn panagram_check(string: &str) -> bool {
 	true
 }
 
+#[allow(dead_code)]
 pub fn missing_char_for_panagram(string: &str) -> String {
 	let mut letters: [bool; 26] = [false; 26];
 
