@@ -1,6 +1,6 @@
 mod string;
 
 fn main() {
-    let reverse_string = string::reverse("abc");
-    println!("{:?}", reverse_string);
+    let reverse_word = string::reverse_word("Harry Potter");
+    println!("{:?}", reverse_word);
 }

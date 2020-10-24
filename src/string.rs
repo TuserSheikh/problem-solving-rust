@@ -1,3 +1,3 @@
-pub fn reverse(string: &str) -> String {
+pub fn reverse_word(string: &str) -> String {
 	string.chars().rev().collect()
 }
