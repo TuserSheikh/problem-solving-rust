@@ -20,3 +20,24 @@ pub fn panagram_check(string: &str) -> bool {
 
 	true
 }
+
+pub fn missing_char_for_panagram(string: &str) -> String {
+	let mut letters: [bool; 26] = [false; 26];
+
+	for c in string.to_lowercase().chars() {
+		if c.is_ascii_alphabetic() {
+			let index = (c as usize) - 97;
+			letters[index] = true;
+		}
+	}
+
+	let mut missing_chars = String::new();
+
+	for (i, v) in letters.iter().enumerate() {
+		if !v {
+			missing_chars.push((i as u8 + 97) as char);
+		}
+	}
+
+	missing_chars
+}
